@@ -45,3 +45,20 @@ func HaveEqualContents(s1, s2 []byte) (b bool) {
 	b = true
 	return
 }
+
+func Max(n1, n2 int) (m int){
+	m = n1
+	if n1 < n2 {
+		m = n2
+	}
+	return	
+}
+
+func Contains(list []string, item string) (b bool) {
+	for _, v := range list {
+		if v == item {
+			b = true
+		}
+	}
+	return
+}
