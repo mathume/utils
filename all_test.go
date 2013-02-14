@@ -2,11 +2,14 @@ package utils
 
 import (
 	. "launchpad.net/gocheck"
+	"testing"
 )
 
 type FUNC struct{}
 
 var _ = Suite(&FUNC{})
+
+func Test(t *testing.T) { TestingT(t) }
 
 func (f *FUNC) TestShortestFirst(c *C) {
 

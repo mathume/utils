@@ -6,29 +6,25 @@ import (
 
 func DiffIndex(s1, s2 string) (diffIndex int, err error) {
 	s1, s2 = ShortestFirst(s1, s2)
-	for i:=0; i<len(s1); i++ {
+	for i := 0; i < len(s1); i++ {
 		if s1[i] != s2[i] {
 			diffIndex = i
 			return
 		}
 	}
-	if len(s1) == len(s2){
+	if len(s1) == len(s2) {
 		err = errors.New("Both strings are equal.")
-	}else{
+	} else {
 		diffIndex = len(s1)
 	}
 	return
 }
 
-func ShortestFirst(s1, s2 string) (s3, s4 string) {
+func ShortestFirst(s1, s2 string) (string, string) {
 	if len(s1) > len(s2) {
-		s3 = s2
-		s4 = s1
-	} else {
-		s3 = s1
-		s4 = s2
+		return s2, s1
 	}
-	return
+	return s1, s2
 }
 
 func Contains(list []string, item string) (b bool) {
