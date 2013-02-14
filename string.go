@@ -31,29 +31,6 @@ func ShortestFirst(s1, s2 string) (s3, s4 string) {
 	return
 }
 
-func HaveEqualContents(s1, s2 []byte) (b bool) {
-	n1, n2 := len(s1), len(s2)
-
-	if n1 != n2 {
-		return
-	}
-	for i, _ := range s1 {
-		if s1[i] != s2[i] {
-			return
-		}
-	}
-	b = true
-	return
-}
-
-func Max(n1, n2 int) (m int){
-	m = n1
-	if n1 < n2 {
-		m = n2
-	}
-	return	
-}
-
 func Contains(list []string, item string) (b bool) {
 	for _, v := range list {
 		if v == item {
